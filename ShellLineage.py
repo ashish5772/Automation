@@ -128,11 +128,11 @@ def recfile(file, dic = None):
                 except Exception as e:
                     print('warn'+key+' not found')
             line = line.strip().replace('\'','').replace('\"','')
-            line = line.replace('/glicdf/','/glicdf2.1/').replace('/glicdm/','/glicdm1.0/')#.replace(' ','')
+            line = line.replace('/somefolder/','/somefolder2.1/').replace('/somefolder2/','/somefolder21.0/')#.replace(' ','')
             #ac_files_rep.append(line)
         else:
             line = line.strip().replace('\'','').replace('\"','')
-            line = line.replace('/glicdf/','/glicdf2.1/').replace('/glicdm/','/glicdm1.0/')
+            line = line.replace('/somefolder/','/somefolder2.1/').replace('/somefolder2/','/somefolder21.0/')
         if '=' in line:
             line = line.split('=')[1]
         ac_files_rep.append(line)
