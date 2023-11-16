@@ -1,3 +1,9 @@
+#The purpose of this script is to generate lineage of nested shell scripts#
+#This script recurses through the shell script provided and drills down to the lowest level of shell scripts while trying to \n#
+#resolve variables that are encountered in the parent as well as child scripts.#
+#Args - "application|jobname|parentshellscript|arg1|arg2.." "envfile1|envfile2.."
+#If env files are provided this script will try to resolve the variables in the env files first and try to resolve them in calls in subsequent shell scripts.#
+
 import os
 import sys
 import re
