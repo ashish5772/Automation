@@ -1,4 +1,4 @@
-#The purpose of this script is to generate lineage of nested shell scripts#
+#The purpose of this script is to generate lineage of nested shell scripts and copy the files with their path to a given location#
 #This script recurses through the shell script provided and drills down to the lowest level of shell scripts while trying to \n#
 #resolve variables that are encountered in the parent as well as child scripts.#
 #Args - "application|jobname|parentshellscript|arg1|arg2.." "envfile1|envfile2.."
@@ -152,7 +152,7 @@ def recfile(file, dic = None):
     for i in files_to_write:
         if os.path.isfile(i.strip()):
             src = i.strip()
-            dst = "/home/asing46/ll5/code/llassessmentasis/"+appname+src
+            dst = "/root/folder1/folder2/"+appname+src
             dstfolder = os.path.dirname(dst)
             if not os.path.exists(dstfolder):
                 os.makedirs(dstfolder)
